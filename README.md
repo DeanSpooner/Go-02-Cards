@@ -93,7 +93,7 @@ A loop looks like the following:
     	fmt.Println(card)
     }
 
-**i**: index of this element in the array;
-**card**: current card we're iterating over;
-**range cards**: take the slice of 'cards' and loop over it;
-**fmt.Println(card)**: run this one time for each card in the slice.
+- **i**: index of this element in the array;
+- **card**: current card we're iterating over;
+- **range cards**: take the slice of 'cards' and loop over it;
+- **fmt.Println(card)**: run this one time for each card in the slice.
