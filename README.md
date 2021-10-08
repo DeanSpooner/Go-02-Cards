@@ -93,7 +93,27 @@ A loop looks like the following:
     	fmt.Println(card)
     }
 
-- **i**: index of this element in the array;
-- **card**: current card we're iterating over;
-- **range cards**: take the slice of 'cards' and loop over it;
-- **fmt.Println(card)**: run this one time for each card in the slice.
+**i**: index of this element in the array;
+**card**: current card we're iterating over;
+**range cards**: take the slice of 'cards' and loop over it;
+**fmt.Println(card)**: run this one time for each card in the slice.
+
+## Types and receiver functions
+
+    type deck []string
+
+    func (d deck) print() {
+    	for i, card := range d{
+    		fmt.Println(i, card)
+    	}
+    }
+
+Similar to create classes in JavaScript, **types** allow us to declare some kind of reusable variable (in this case, a slice of strings) that will have methods attached to it.
+
+Any variable of type "deck" now gets access to "print()" method. Written in external deck.go file, utilised in main.go file.
+
+Like using `this` in JavaScript.
+
+### Why `d`?
+
+Usually abbreviated to one or two-letter version of type, e.g. d for deck. As long as it matches within the function.
